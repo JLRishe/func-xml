@@ -1,0 +1,34 @@
+{
+  "name": "func-xml",
+  "version": "0.0.1",
+  "description": "Functional XML DOM traversal library for JavaScript",
+  "main": "source\\index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "xmldom": "^0.1.27"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JLRishe/func-xml.git"
+  },
+  "keywords": [
+    "xml",
+    "functional",
+    "javascript",
+    "fp"
+  ],
+  "author": "James Rishe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JLRishe/func-xml/issues"
+  },
+  "homepage": "https://github.com/JLRishe/func-xml#readme"
+}
