@@ -1,6 +1,6 @@
 const assert = require('assert');
 const initDoc = require('./shared/initDoc');
-const { allDescendants, descendants } = require('../source');
+const { allDescendants, descendants } = require('..');
 const { NS_SERIES, NS_PEOPLE } = require('./shared/constants');
 
 describe('descendants', () => {

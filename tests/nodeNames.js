@@ -1,7 +1,7 @@
 const assert = require('assert');
 const initDoc = require('./shared/initDoc');
 const { chain } = require('ramda');
-const { localName, namespaceUri, hasLocalName, inNamespace, hasName, allChildNodes } = require('../source');
+const { localName, namespaceUri, hasLocalName, inNamespace, hasName, allChildNodes } = require('..');
 const { NS_SERIES, NS_PEOPLE } = require('./shared/constants');
 
 describe('node name tests', () => {

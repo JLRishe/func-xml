@@ -1,7 +1,7 @@
 const assert = require('assert');
 const { composeK } = require('ramda');
 const initDoc = require('./shared/initDoc');
-const { allChildNodes, childNodes } = require('../source');
+const { allChildNodes, childNodes } = require('..');
 const { NS_SERIES, NS_PEOPLE } = require('./shared/constants');
 
 describe('child nodes', () => {

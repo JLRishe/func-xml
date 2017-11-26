@@ -1,7 +1,7 @@
 const assert = require('assert');
 const { composeK, chain } = require('ramda');
 const initDoc = require('./shared/initDoc');
-const { allChildNodes, isElement, isDocumentNode } = require('../source');
+const { allChildNodes, isElement, isDocumentNode } = require('..');
 
 describe('node tests', () => {
 	const doc = initDoc();

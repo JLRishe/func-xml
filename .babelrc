@@ -1,0 +1,18 @@
+{
+  "plugins": ["external-helpers"],
+  "env": {
+    "es": {
+	  "presets": [
+        ["env", {
+		  "modules": false
+        }]
+      ]
+	},
+    "cjs": {
+	  "presets": [
+        ["env", {
+       }]
+      ]
+	}
+  }
+}

@@ -1,6 +1,6 @@
-const { curry, whereEq, equals, bind } = require('ramda');
+import { curry, whereEq, equals, bind } from 'ramda';
 
-module.exports = {
-	toArray: bind(Array.from, Array),
-	propEq: curry((propName, value) => whereEq({ [propName]: value }))
-};
+const toArray = bind(Array.from, Array);
+const propEq = curry((propName, value) => whereEq({ [propName]: value }));
+
+export { toArray, propEq };

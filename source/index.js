@@ -1,3 +1,4 @@
+require('./babel-helpers');
 const { isElement, isDocumentNode } = require('./nodeTypeTests');
 const { localName, namespaceUri, hasLocalName, inNamespace, hasName } = require('./nodeNames');
 
