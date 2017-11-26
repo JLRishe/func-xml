@@ -1,4 +1,13 @@
+const { compose, prop, isNil, when, always, filter } = require('ramda');
 const { toArray } = require('./shared');
-const { compose, prop, isNil, when, always, curry } = require('ramda');
+const { hasName } = require('./nodeNames');
 
-module.exports = compose(toArray, when(isNil, always([])), prop('childNodes'));
+const normalizeToArray = when(isNil, always([]));
+
+const allChildNodes = compose(toArray, normalizeToArray, prop('childNodes'));
+const childNodes = (localName, uri) => compose(filter(hasName(localName, uri)), allChildNodes);
+
+module.exports = {
+	allChildNodes,
+	childNodes
+};
