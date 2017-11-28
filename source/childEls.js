@@ -7,6 +7,6 @@ const allChildEls = compose(filter(isElement), allChildNodes);
 const childEls = (localName, uri) => compose(filter(hasName(localName, uri)), allChildEls);
 
 export {
-	allChildEls,
-	childEls
+    allChildEls,
+    childEls
 };
