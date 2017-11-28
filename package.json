@@ -1,6 +1,6 @@
 {
   "name": "func-xml",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Functional XML DOM traversal library for JavaScript",
   "main": "src/index.js",
   "directories": {
@@ -23,6 +23,9 @@
     "pretest": "npm run build:cjs",
     "test": "mocha tests"
   },
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JLRishe/func-xml.git"
