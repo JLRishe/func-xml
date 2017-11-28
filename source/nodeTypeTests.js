@@ -1,9 +1,12 @@
-const { whereEq } = require('ramda');
-const { ELEMENT_NODE, DOCUMENT_NODE, NODE_TYPE } = require('./shared/constants');
+import { whereEq } from 'ramda';
+import { ELEMENT_NODE, DOCUMENT_NODE, NODE_TYPE } from './shared/constants';
 
 const nodeTypeTest = type => whereEq({ [NODE_TYPE]: type });
 
-module.exports = {
-	isElement: nodeTypeTest(ELEMENT_NODE),
-	isDocumentNode: nodeTypeTest(DOCUMENT_NODE)
+const isElement = nodeTypeTest(ELEMENT_NODE);
+const isDocumentNode = nodeTypeTest(DOCUMENT_NODE);
+
+export {
+	isElement, 
+	isDocumentNode,
 };

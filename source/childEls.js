@@ -1,12 +1,12 @@
-const { compose, filter } = require('ramda');
-const { allChildNodes } = require('./childNodes');
-const { isElement } = require('./nodeTypeTests');
-const { hasName } = require('./nodeNames');
+import { compose, filter } from 'ramda';
+import { allChildNodes } from './childNodes';
+import { isElement } from './nodeTypeTests';
+import { hasName } from './nodeNames';
 
 const allChildEls = compose(filter(isElement), allChildNodes);
 const childEls = (localName, uri) => compose(filter(hasName(localName, uri)), allChildEls);
 
-module.exports = {
+export {
 	allChildEls,
 	childEls
 };

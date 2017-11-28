@@ -1,5 +1,4 @@
 {
-  "plugins": ["external-helpers"],
   "env": {
     "es": {
 	  "presets": [
@@ -10,8 +9,7 @@
 	},
     "cjs": {
 	  "presets": [
-        ["env", {
-       }]
+        ["env"]
       ]
 	}
   }

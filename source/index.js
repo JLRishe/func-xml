@@ -1,27 +1,6 @@
-require('./babel-helpers');
-const { isElement, isDocumentNode } = require('./nodeTypeTests');
-const { localName, namespaceUri, hasLocalName, inNamespace, hasName } = require('./nodeNames');
+export * from './nodeTypeTests';
+export * from './nodeNames';
 
-const { allChildNodes, childNodes } = require('./childNodes');
-const { allChildEls, childEls } = require('./childEls');
-const { allDescendants, descendants} = require('./descendants');
-
-module.exports = {
-	isElement,
-	isDocumentNode,
-	
-	localName,
-	namespaceUri,
-	hasLocalName,
-	inNamespace,
-	hasName,
-	
-	allChildNodes,
-	childNodes,
-	
-	allChildEls,
-	childEls,
-	
-	allDescendants,
-	descendants
-};
+export * from './childNodes';
+export * from './childEls';
+export * from './descendants';
