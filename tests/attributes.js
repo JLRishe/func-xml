@@ -1,8 +1,8 @@
 const assert = require('assert');
-const { compose, chain, head } = require('ramda');
-const { allAttributes, allChildNodes, childEls } = require('..');
+const { compose, composeK, chain, head } = require('ramda');
+const { allAttributes, attributes, allChildNodes, childEls, allChildEls } = require('..');
 const initDoc = require('./shared/initDoc');
-const { NS_PEOPLE } = require('./shared/constants');
+const { NS_PEOPLE, NS_SERIES } = require('./shared/constants');
 
 
 describe('attribute tests', () => {
@@ -22,5 +22,15 @@ describe('attribute tests', () => {
         
         assert.equal(harryAttribs.length, 2);
         assert.equal(l3Attribs.length, 4);
+    });
+    
+    it('should select attributes by name', () => {
+        const root = compose(head, allChildEls)(doc);
+
+        const target = compose(head, attributes('target'))(root);
+        const numBooks = compose(head, attributes('numBooks', NS_SERIES))(root);
+        
+        assert.equal(target.value, 'Young Adult');
+        assert.equal(numBooks.value, '7');
     });
 });
