@@ -5,7 +5,7 @@ const initDoc = require('./shared/initDoc');
 const { NS_PEOPLE, NS_SERIES } = require('./shared/constants');
 
 
-describe('attribute tests', () => {
+describe('attributes', () => {
     let doc, l1Nodes, l2Nodes, characters;
     
     before(() => {
@@ -43,6 +43,6 @@ describe('attribute tests', () => {
         
         assert.equal(target.value, 'Young Adult');
         assert.equal(numBooks.value, '7');
-        assert.equal(hippo, undefined);        
+        assert.strictEqual(hippo, null);        
     });
 });
