@@ -30,13 +30,13 @@ Returns a function which, when called on a node, returns a list of all attribute
 
 `allChildEls(node)`
 
-Node -> [Node]
+_Node -> [Node]_
 
 Returns a list of all child elements of the provided node, in document order.
 
 `childEls(localName, namespaceUri = null)`
 
-(String[, String]) -> Node -> [Node]
+_(String[, String]) -> Node -> [Node]_
 
 Returns a function which, when called on a node, returns a list of all child elemenets, in document order, of the provided node that have the specified local name and namespace URI.
 
@@ -44,13 +44,13 @@ Returns a function which, when called on a node, returns a list of all child ele
 
 `allChildNodes(node)`
 
-Node -> [Node]
+_Node -> [Node]_
 
 Returns a list of all child nodes of the provided node, in document order.
 
 `childNodes(localName, namespaceUri = null)`
 
-(String[, String]) -> Node -> [Node]
+_(String[, String]) -> Node -> [Node]_
 
 Returns a function which, when called on a node, returns a list of all child nodes, in document order, of the provided node that have the specified local name and namespace URI.
 
@@ -58,13 +58,13 @@ Returns a function which, when called on a node, returns a list of all child nod
 
 `allDescendants(node)`
 
-Node -> [Node]
+_Node -> [Node]_
 
 Returns a list of all descendants of the provided node, in document order.
 
 `descendants(localName, namespaceUri = null)`
 
-(String[, String]) -> Node -> [Node]
+_(String[, String]) -> Node -> [Node]_
 
 Returns a function which, when called on a node, returns a list of all descendants, in document order, of the provided node that have the specified local name and namespace URI.
 
@@ -72,31 +72,31 @@ Returns a function which, when called on a node, returns a list of all descendan
 
 `localName(node)`
 
-Node -> String
+_Node -> String_
 
 Returns the local name of the provided node.
 
 `hasLocalName(name)`
 
-String -> Node -> Boolean
+_String -> Node -> Boolean_
 
 Returns a function which, when called on a node, returns true iff the node has the specified local name.
 
 `namespaceUri(node)`
 
-Node -> String
+_Node -> String_
 
 Returns the namespace URI of the provided node.
 
 `inNamespace(namespaceUri)`
 
-String -> Node -> Boolean
+_String -> Node -> Boolean_
 
 Returns a function which, when called on a node, returns true iff the node has is in the specified namespace.
 
 `hasName(localName, namespaceUri = null)`
 
-(String[, String]) -> Node -> Boolean
+_(String[, String]) -> Node -> Boolean_
 
 Returns a function which, when called on a node, returns true iff the node has the specified local name and is in the specified namespace.
 
@@ -104,18 +104,18 @@ Returns a function which, when called on a node, returns true iff the node has t
 
 `isElement(node)`
 
-Node -> Boolean
+_Node -> Boolean_
 
 Returns `true` iff the specified node is an element.
 
 `isDocumentNode(node)`
 
-Node -> Boolean
+_Node -> Boolean_
 
 Returns `true` iff the specified node is a document node.
 
 `isAttribute(node)` 
 
-Node -> Boolean
+_Node -> Boolean_
 
 Returns `true` iff the specified node is an attribute.
