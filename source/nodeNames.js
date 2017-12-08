@@ -6,14 +6,14 @@ const localName = prop(LOCAL_NAME);
 const namespaceUri = compose(normalizeToNull, prop(NAMESPACE_URI));
 
 const hasLocalName = name => compose(equals(name), localName);
-const inNamespace = uri => compose(equals(normalizeToNull(uri)), namespaceUri);
-const hasName = (localName, uri) => both(hasLocalName(localName), inNamespace(uri));
+const isInNamespace = uri => compose(equals(normalizeToNull(uri)), namespaceUri);
+const hasName = (localName, uri) => both(hasLocalName(localName), isInNamespace(uri));
 
 export {
-    localName,
-    namespaceUri,
-    
-    hasLocalName,
-    inNamespace,
-    hasName
+    localName
+    , namespaceUri
+
+    , hasLocalName
+    , isInNamespace
+    , hasName
 };

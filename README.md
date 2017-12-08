@@ -94,7 +94,7 @@ _Node -> String_
 
 Returns the namespace URI of the provided node.
 
-`inNamespace(namespaceUri)`
+`isInNamespace(namespaceUri)`
 
 _String -> Node -> Boolean_
 
