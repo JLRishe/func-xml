@@ -5,6 +5,13 @@ _This library is a work in progress and there are more features I plan to add as
 
 ## API Reference
 
+[attributes](#attributes)  
+[child elements](#child-elements)  
+[child nodes](#child-nodes)  
+[descendants](#descendants)  
+[node names and namespaces](#node-names-and-namespaces)  
+[node type tests](#node-type-tests)
+
 ### attributes
 
 `allAttributes(node)`
