@@ -11,6 +11,13 @@ const docXml = `<series xmlns="http://www.example.com/series"
                     <p:character name="Harry Potter" p:mf="m" />
                     <p:character name="Hermione Granger" p:mf="f" />
                   </p:characters>
+                  <plotDevices>
+                    <deathlyHallows xmlns="">
+                      <deathlyHallow>Resurrection Stone</deathlyHallow>
+                      <deathlyHallow>Invisibility Cloak</deathlyHallow>
+                      <deathlyHallow>Elder Wand</deathlyHallow>
+                    </deathlyHallows>
+                  </plotDevices>
                 </series>`;
                 
 module.exports = () => new dom().parseFromString(docXml);

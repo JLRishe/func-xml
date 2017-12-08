@@ -10,7 +10,7 @@ describe('child elements', () => {
 	it('should return all child elements', () => {
 		const result = composeK(allChildEls, allChildEls, allChildEls)(doc);
 		
-		assert.equal(result.length, 2);
+		assert.equal(result.length, 3);
 		assert.equal(result[0].getAttribute('name'), 'Harry Potter');
 	});	
 

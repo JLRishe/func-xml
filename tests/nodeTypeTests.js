@@ -1,7 +1,7 @@
 const assert = require('assert');
-const { composeK, chain } = require('ramda');
+const { compose, composeK, map, filter, chain, head } = require('ramda');
 const initDoc = require('./shared/initDoc');
-const { allChildNodes, isElement, isDocumentNode, isAttribute } = require('..');
+const { allChildNodes, isElement, isAttribute, hasName, isText, isDocumentNode } = require('..');
 
 describe('node tests', () => {
     const doc = initDoc();
@@ -27,5 +27,12 @@ describe('node tests', () => {
         assert.equal(true, isAttribute(l3Nodes[1].attributes.getNamedItem('name')));
         assert.equal(false, isAttribute(l3Nodes[0]), 'text node');
         assert.equal(false, isAttribute(l3Nodes[1]), 'element node');
+    });
+    
+    it('should test text nodes', () => {
+       const textNode = compose(head, chain(allChildNodes), chain(allChildNodes), filter(hasName('deathlyHallows')))(l3Nodes);
+
+       assert.equal(isText(textNode), true);
+       assert.equal(isText(l3Nodes[1]), false);
     });
 });
