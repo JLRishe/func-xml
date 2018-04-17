@@ -1,16 +1,16 @@
 {
   "env": {
     "es": {
-	  "presets": [
+      "presets": [
         ["env", {
-		  "modules": false
+          "modules": false
         }]
       ]
-	},
+    },
     "cjs": {
-	  "presets": [
+      "presets": [
         ["env"]
       ]
-	}
+    }
   }
 }
