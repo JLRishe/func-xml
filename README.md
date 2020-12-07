@@ -32,6 +32,12 @@ Returns a function which, when called on a node, returns a list of all attribute
 
 Returns a function which, when called on a node, returns its attribute that has the specified local name and namespace URI. Returns `null` if no such attribute is present.
 
+`attributeValue(localName, namespaceUri = null)`
+
+(String, [, String)) -> Node -> String
+
+Returns the value of the attribute with the specified name and namespace URI, or `null` if it is not present.
+
 ### child elements
 
 `allChildEls(node)`
