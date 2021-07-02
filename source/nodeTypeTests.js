@@ -1,7 +1,8 @@
-import { whereEq } from 'ramda';
+import { propEq } from 'ramda';
 import { ELEMENT_NODE, ATTRIBUTE_NODE, TEXT_NODE, DOCUMENT_NODE, NODE_TYPE } from './shared/constants';
 
-const nodeTypeTest = type => whereEq({ [NODE_TYPE]: type });
+// String -> Node -> Boolean
+const nodeTypeTest = propEq(NODE_TYPE);
 
 const isElement = nodeTypeTest(ELEMENT_NODE);
 const isText = nodeTypeTest(TEXT_NODE);

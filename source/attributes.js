@@ -9,12 +9,12 @@ const attributes = (localName, uri) => compose(filter(hasName(localName, uri)), 
 const attribute = (localName, uri) => compose(normalizeToNull, head, attributes(localName, uri));
 
 const attributeValue = (localName, uri) => (node) => {
-    const nullUri = isNil(uri);
-    const present = nullUri ? node.hasAttribute(localName) : node.hasAttributeNS(uri, localName);
+    const isNilUri = isNil(uri);
+    const present = isNilUri ? node.hasAttribute(localName) : node.hasAttributeNS(uri, localName);
 
     if (!present) { return null; }
 
-    return nullUri ? node.getAttribute(localName) : node.getAttributeNS(uri, localName);
+    return isNilUri ? node.getAttribute(localName) : node.getAttributeNS(uri, localName);
 }
     
 
