@@ -1,5 +1,5 @@
-import { compose, prop, isNil, when, always, filter } from 'ramda';
-import { toArray, coalesceArray } from './shared';
+import { compose, prop, filter } from 'ramda';
+import { coalesceArray } from './shared';
 import { hasName } from './nodeNames';
 
 
