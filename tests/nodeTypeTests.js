@@ -1,5 +1,5 @@
-const assert = require('assert');
-const { compose, composeK, map, filter, chain, head } = require('ramda');
+const { strict: assert } = require('assert');
+const { compose, filter, chain, head } = require('ramda');
 const initDoc = require('./shared/initDoc');
 const { allChildNodes, isElement, isAttribute, hasName, isText, isDocumentNode } = require('..');
 
