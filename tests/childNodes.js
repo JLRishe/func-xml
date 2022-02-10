@@ -1,14 +1,14 @@
 const assert = require('assert');
-const { composeK } = require('ramda');
 const initDoc = require('./shared/initDoc');
 const { allChildNodes, childNodes } = require('..');
 const { NS_SERIES, NS_PEOPLE } = require('./shared/constants');
+const { composeK } = require('./shared/ramda.helpers');
 
 describe('child nodes', () => {
     const doc = initDoc();
 
     it('should return all child nodes', () => {
-        const result = composeK(allChildNodes, allChildNodes, allChildNodes)(doc);
+        const result = composeK([allChildNodes, allChildNodes, allChildNodes])(doc);
         
         assert.equal(8, result.length);
         assert.equal('Harry Potter', result[1].getAttribute('name'));
