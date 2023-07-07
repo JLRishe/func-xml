@@ -3,7 +3,7 @@
     "es": {
       "presets": [
         [
-          "env",
+          "@babel/preset-env",
           {
             "modules": false
           }
@@ -13,7 +13,7 @@
     "cjs": {
       "presets": [
         [
-          "env"
+          "@babel/preset-env"
         ]
       ]
     }
