@@ -10,12 +10,12 @@
     "ramda": "0.29.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.6",
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
     "@xmldom/xmldom": "^0.8.8",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.7.0",
     "cross-env": "^7.0.3",
-    "mocha": "^8.2.1"
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "build:es": "cross-env BABEL_ENV=es babel source --out-dir es",
