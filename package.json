@@ -1,21 +1,21 @@
 {
   "name": "func-xml",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Functional XML DOM traversal library for JavaScript",
   "main": "src/index.js",
   "directories": {
     "test": "tests"
   },
   "dependencies": {
-    "ramda": "^0.28.0"
+    "ramda": "0.29.0"
   },
   "devDependencies": {
+    "@xmldom/xmldom": "^0.8.8",
     "babel-cli": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "cross-env": "^7.0.3",
-    "mocha": "^8.2.1",
-    "xmldom": "^0.5.0"
+    "mocha": "^8.2.1"
   },
   "scripts": {
     "build:es": "cross-env BABEL_ENV=es babel source --out-dir es",

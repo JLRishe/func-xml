@@ -1,4 +1,4 @@
-const NODE_TYPE = 'nodeType';
+const NODE_TYPE_PROP = 'nodeType';
 const NAMESPACE_URI = 'namespaceURI';
 const LOCAL_NAME = 'localName';
 
@@ -8,7 +8,7 @@ const TEXT_NODE = 3;
 const DOCUMENT_NODE = 9;
 
 export {
-    NODE_TYPE,
+    NODE_TYPE_PROP,
     NAMESPACE_URI,
     LOCAL_NAME,
     

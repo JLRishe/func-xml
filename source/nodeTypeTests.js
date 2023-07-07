@@ -1,8 +1,8 @@
-import { propEq } from 'ramda';
-import { ELEMENT_NODE, ATTRIBUTE_NODE, TEXT_NODE, DOCUMENT_NODE, NODE_TYPE } from './shared/constants';
+import { __, propEq } from 'ramda';
+import { ELEMENT_NODE, ATTRIBUTE_NODE, TEXT_NODE, DOCUMENT_NODE, NODE_TYPE_PROP } from './shared/constants';
 
 // String -> Node -> Boolean
-const nodeTypeTest = propEq(NODE_TYPE);
+const nodeTypeTest = propEq(__, NODE_TYPE_PROP);
 
 const isElement = nodeTypeTest(ELEMENT_NODE);
 const isText = nodeTypeTest(TEXT_NODE);
