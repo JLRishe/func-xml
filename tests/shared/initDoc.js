@@ -1,4 +1,4 @@
-const dom = require('xmldom').DOMParser;
+const dom = require('@xmldom/xmldom').DOMParser;
 
 const docXml = `<series xmlns="http://www.example.com/series" 
                         xmlns:s="http://www.example.com/series" 
